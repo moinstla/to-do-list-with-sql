@@ -1,0 +1,16 @@
+<h1>Your Current Lists</h1>
+
+<% if @lists.any? %>
+  <h3>CLick on a list to see its tasks:</h3>
+
+  <ul>
+    <% @lists.each do |list| %>
+      <li><a href="/lists/<%= list.id %>"><%= list.name %></a></li>
+    <% end %>
+  </ul>
+
+<% else %>
+
+  <p>There are no lists yet!</p>
+
+<% end %>
